@@ -1,0 +1,98 @@
+body {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;    /* center in X axis */
+    align-items: center;        /* center in Y axis */
+    min-height: 100vh;
+    flex-direction: column;
+    background-image: url(layer51/tlo.png);
+    background-position: center center;
+    background-size: cover;
+}
+
+section {
+    background-color: #fff;
+    background-image: inherit;   /* or placeholdit */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 458px;
+    height: 900px;
+}
+
+header {
+    background-image: url("layer51/logo.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 37px;
+    width: 125px;
+    margin: 20px auto;
+}
+
+#sublogo {
+    text-align: center;
+    color: #bbb;
+    margin-top: -10px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+#images {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 458px;
+    height: 458px;
+    background-color: #fff;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    border: 1px solid #000;
+    flex-direction: row-reverse;
+}
+
+#images img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    flex-direction: column-reverse;
+}
+
+article h1 {
+    text-align: center;
+    color: #bbdee4;
+    font-size: 22px;
+}
+
+article h1 span {
+    font-weight: 300;
+}
+
+article p {
+    text-align: justify;
+    color: #ccc;
+    font-size: 10px;
+}
+
+article a {
+    color: #ccc;
+    text-decoration-style: dotted;
+}
+
+#text {
+    border-top: 1px solid #394448;
+    margin-top: -20px;
+}
+
+#mail {
+    width: 54px;
+    height: 55px;
+    background-image: url(layer51/mail.png);
+    margin: 50px auto 0 auto;
+}
+
+footer {
+    color: #404548;
+    text-align: center;
+    font-size: 8px;
+    margin-top: 55px;
+}
