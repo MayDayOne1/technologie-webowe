@@ -1,0 +1,151 @@
+body {
+    margin: 0 auto;
+    font-family: Arial,sans-serif;
+    color: #fff;
+    font-size: 16px;
+    max-width: 639px;
+}
+
+header {
+    background-color: #252a3a;
+    display: flex;
+    flex-direction: column;
+}
+
+#menu-btn {
+    text-align: right;
+    color: #1B98F8;
+    margin: 5px;
+}
+
+#compose {
+    border-radius: 20px;
+    padding: 8px 16px;
+    margin: 16px 0;
+    background-color: #1B98F8;
+    width: 75px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#nav {
+    margin: 0;
+    line-height: 30px;
+    padding-left: 25px;
+}
+
+#folders {
+    list-style: none;
+    padding: 0;
+}
+
+#nav li:hover {
+    background-color: #373c5a;
+}
+
+#folders span, #nav span {
+    color: #4b7197;
+}
+
+#labels {
+    padding-left: 20px;
+    margin-top: 0;
+}
+
+#labels li {
+    list-style-type: square;
+}
+
+.mails {
+    padding: 14px 16px;
+    display: flex;
+    border-bottom: 1px solid #eee;
+}
+
+.mail-left-border {
+    border-left: 6px solid #1B98F8;
+}
+
+.mails img {
+    width: 42px;
+    height: 42px;
+    border-radius: 3px;
+    margin-right: 8px;
+}
+
+.mail-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.mail-name {
+    font-size: 13px;
+    color: #999;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.mail-topic {
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+}
+
+.mail-intro {
+    font-size: 13px;
+    color: #000;
+    margin: 7px 0;
+}
+
+.mails:hover {
+    background-color: #eee;
+}
+
+#mail-details h1 {
+    font-size: 32px;
+    color: #000;
+    margin-bottom: 0;
+}
+
+#mail-details-header {
+    font-size: 16px;
+    color: #000;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#mail-sender-details {
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+#mail-sender {
+    color: #1b98f8;
+}
+
+#mail-date {
+    color: #999;
+}
+
+#mail-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    align-content: center;
+    margin: 0;
+}
+
+.mail-btn {
+    border-radius: 20px;
+    padding: 6px 26px;
+    margin: 5px 0;
+    border: 1px solid #666;
+    text-align: center;
+    height: 16px;
+}
+
+#mail-main {
+    color: #000;
+}
