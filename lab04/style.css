@@ -1,7 +1,6 @@
 body {
     margin: 0 auto;
-    font-family: Arial,sans-serif;
-    color: #fff;
+    font-family: Arial, sans-serif;
     font-size: 16px;
     max-width: 639px;
 }
@@ -10,18 +9,28 @@ header {
     background-color: #252a3a;
     display: flex;
     flex-direction: column;
+    position: relative;
+    color: #fff;
 }
 
-#menu-btn {
+.menu-btn {
     text-align: right;
     color: #1B98F8;
     margin: 5px;
 }
 
+header:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+
 #compose {
     border-radius: 20px;
     padding: 8px 16px;
-    margin: 16px 0;
     background-color: #1B98F8;
     width: 75px;
     text-align: center;
@@ -41,6 +50,7 @@ header {
 
 #nav li:hover {
     background-color: #373c5a;
+    cursor: pointer;
 }
 
 #folders span, #nav span {
@@ -53,8 +63,13 @@ header {
 }
 
 #labels li {
-    list-style-type: square;
+    list-style-type: none;
 }
+
+.fa-square {
+    background-color: #fff;
+}
+
 
 .mails {
     padding: 14px 16px;
@@ -99,6 +114,7 @@ header {
 
 .mails:hover {
     background-color: #eee;
+    cursor: pointer;
 }
 
 #mail-details h1 {
@@ -135,6 +151,7 @@ header {
     width: 40%;
     align-content: center;
     margin: 0;
+    justify-content: flex-end;
 }
 
 .mail-btn {
@@ -144,6 +161,12 @@ header {
     border: 1px solid #666;
     text-align: center;
     height: 16px;
+    margin: 2px;
+}
+
+.mail-btn:hover {
+    background-color: #e8e8e8;
+    cursor: pointer;
 }
 
 #mail-main {
