@@ -60,6 +60,7 @@ header:hover .dropdown-menu {
 #labels {
     padding-left: 20px;
     margin-top: 0;
+    margin-left: -12px;
 }
 
 #labels li {
@@ -67,9 +68,20 @@ header:hover .dropdown-menu {
 }
 
 .fa-square {
-    background-color: #fff;
+    margin-right: 5px;
 }
 
+.sq1 {
+    color: #ffc94c;
+}
+
+.sq2 {
+    color: #41ccb4;
+}
+
+.sq3 {
+    color: #40c365;
+}
 
 .mails {
     padding: 14px 16px;
