@@ -1,0 +1,118 @@
+/* all i mobile pion */
+body {
+    background-color: #ccc;
+}
+
+main {
+    margin: 0 auto;
+    background-color: #fff;
+    /* height: 800px; */
+    display: grid;
+    /* grid-template-columns: [start] 200px [sl] 800px [thl] 200px [end]; */
+    /* grid-template-columns: auto; */
+    /* grid-template-rows: 200px 600px 200px; */
+    grid-template-areas:
+        "header"
+        "lside"
+        "main"
+        "rside"
+        "footer";
+}
+
+main > * {
+    background-color: antiquewhite;
+}
+
+header {
+    background-color: lightblue;
+    /* grid-column-start: start; */
+    /* grid-column-end: end; */
+    /* grid-row: 1 / 4; */
+    grid-area: header;
+}
+
+aside {
+    background-color: lightcoral;
+    grid-area: lside;
+}
+
+section {
+    background-color: lightgray;
+    grid-area: rside;
+}
+
+article {
+    background-color: lightseagreen;
+    grid-area: main;
+}
+
+footer {
+    background-color: lightpink;
+    grid-area: footer;
+}
+
+@media screen and (min-width: 576px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "lside rside"
+            "main main"
+            "footer footer";
+    }
+}
+@media screen and (min-width: 768px) {
+    
+}
+@media screen and (min-width: 992px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "header header"
+            "lside rside"
+            "main main"
+            "footer footer";
+    }
+}
+@media screen and (min-width: 1200px) {
+    main {
+        grid-template-columns: 200px 800px 200px;
+        grid-template-rows: 200px 600px 200px;
+        grid-template-areas:
+            "header header header"
+            "lside main rside"
+            "footer footer footer";
+    }
+}
+@media screen and (min-width: 1400px) {
+    main {
+        grid-template-columns: 400px 800px 400px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        background-image: url(small.jpg);
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    main {
+        background-image: url(medium.jpg);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    main {
+        background-image: url(large.jpg);
+    }
+}
+
+/* tel pion <576,
+tel poziom <768,
+tablet <992,
+tablet poziom i małe stare brzydkie ekrany <1200,
+desktop <1400
+*/
+/* @media screen and (max-width: 800px) { */
+/* @media screen and (min-width: 400px) and (max-width: 800px) { */
