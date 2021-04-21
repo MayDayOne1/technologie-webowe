@@ -2,7 +2,7 @@ body {
     margin: 0 auto;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    max-width: 639px;
+    max-width: 100%;
 }
 
 header {
@@ -183,4 +183,53 @@ header:hover .dropdown-menu {
 
 #mail-main {
     color: #000;
+}
+
+@media screen and (min-width: 640px) {
+   
+   .menu-btn {
+       color: #252a3a;
+   }
+
+   .dropdown-menu {
+       display: block;
+   }
+
+   header {
+       grid-row: 1 / 5;
+   }
+
+   main {
+       display: grid;
+       grid-template-columns: 150px auto;
+       grid-auto-flow: column;
+       grid-template-rows: 200px auto;
+   }
+
+   #main-mails {
+       grid-column: 2 / 2;
+       grid-row-start: 1;
+       overflow: auto;
+   }
+
+   #mail-details {
+       grid-column: 2 / 3;
+       grid-row: 2 / 3;
+       margin: 35px;
+   }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        grid-template-columns: 150px 350px auto;
+    }
+
+    #main-mails {
+        grid-row: 1 / 3;
+    }
+
+    #mail-details {
+        grid-column-start: 3;
+        grid-row: 1 / 3;
+    }
 }
