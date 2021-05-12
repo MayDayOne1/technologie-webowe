@@ -1,0 +1,61 @@
+body {
+    background-color: #5b6775;
+}
+
+main {
+    display: flex;
+    width: 500px;
+    margin: 100px auto 0 auto;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    padding: 5px;
+    list-style-type: square;
+    border: 1px solid #ccc;
+}
+
+.front {
+    animation: swap 3s;
+    animation-fill-mode: both;
+    margin-right: -25px;
+}
+
+.back {
+    animation: swap2 3s;
+    animation-fill-mode: both;
+    margin-left: -25px;
+    z-index: 1;
+}
+
+.bottom {
+    text-align: center;
+    background-color: #c0d2d2;
+    height: auto;
+}
+
+#switch {
+    background-color: #b37874;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    color: #fff;
+    cursor: pointer;
+    margin: 50px auto 0 auto;
+}
+
+
+@keyframes swap {
+    0% {transform: translateX(0px) scale(120%, 120%);}
+    50% {transform: translateX(-25px); z-index: 0;}
+    100% {transform: translateX(0px);}
+}
+
+@keyframes swap2 {
+    0% {transform: translateX(-25px)}
+    50% {transform: translateX(25px); z-index: 1;} 
+    100% {transform: translateX(0px) scale(120%, 120%);;}
+}
