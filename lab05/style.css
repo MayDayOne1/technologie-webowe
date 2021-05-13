@@ -12,28 +12,39 @@ main {
     width: 200px;
     height: 200px;
     background-color: #fff;
-    padding: 5px;
-    list-style-type: square;
     border: 1px solid #ccc;
+    position: absolute;
 }
 
-.front {
-    animation: swap 3s;
-    animation-fill-mode: both;
-    margin-right: -25px;
+.box li {
+    margin-left: -10px;
+    list-style-type: square;
 }
 
-.back {
-    animation: swap2 3s;
-    animation-fill-mode: both;
-    margin-left: -25px;
-    z-index: 1;
+.up {
+    padding: 5px;
+    height: 150px;
 }
 
 .bottom {
     text-align: center;
     background-color: #c0d2d2;
-    height: auto;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.two {
+    margin-left: 200px;
+}
+
+.front {
+    animation: swap 3s;
+    animation-fill-mode: both;
+}
+
+.back {
+    animation: swap2 3s;
+    animation-fill-mode: both;
 }
 
 #switch {
@@ -44,18 +55,18 @@ main {
     border: 1px solid #fff;
     color: #fff;
     cursor: pointer;
-    margin: 50px auto 0 auto;
+    margin: 250px auto 0 auto;
 }
 
 
 @keyframes swap {
     0% {transform: translateX(0px) scale(120%, 120%);}
-    50% {transform: translateX(-25px); z-index: 0;}
+    50% {transform: translateX(-25px); z-index: 1;}
     100% {transform: translateX(0px);}
 }
 
 @keyframes swap2 {
-    0% {transform: translateX(-25px)}
-    50% {transform: translateX(25px); z-index: 1;} 
-    100% {transform: translateX(0px) scale(120%, 120%);;}
+    0% {transform: translateX(0px)}
+    50% {transform: translateX(25px); z-index: 2;} 
+    100% {transform: translateX(0px) scale(120%, 120%); z-index: 2;}
 }

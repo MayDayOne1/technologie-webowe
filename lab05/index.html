@@ -10,43 +10,54 @@
 <body>
     <main>
         <!-- classes: back: scale 0,9, front: scale 120% -->
-        <div class="box one front">
-            <h3>Happy Sushi Lunch</h3>
-            <ul>
-                <li>California Roll</li>
-                <li>2 Pieces Salmon Nigiri</li>
-                <li>Sea Salt Edamane</li>
-                <li>Miso Soup</li>
-            </ul>
+        <div class="box one">
+            <div class="up">
+                <h3>Happy Sushi Lunch</h3>
+                <ul>
+                    <li>California Roll</li>
+                    <li>2 Pieces Salmon Nigiri</li>
+                    <li>Sea Salt Edamane</li>
+                    <li>Miso Soup</li>
+                </ul>
+            </div>
             <div class="bottom">
                 $12
             </div>
         </div>
-        <div class="box two back">
-            <h3>Sushi Lover's Lunch</h3>
-            <ul>
-                <li>Spicy Tuna Roll</li>
-                <li>Shrimp Tempura Roll</li>
-                <li>4 Pieces Assorted Nigiri</li>
-                <li>Wonton Soup</li>
-            </ul>
+        <div class="box two">
+            <div class="up">
+                <h3>Sushi Lover's Lunch</h3>
+                <ul>
+                    <li>Spicy Tuna Roll</li>
+                    <li>Shrimp Tempura Roll</li>
+                    <li>4 Pieces Assorted Nigiri</li>
+                    <li>Wonton Soup</li>
+                </ul>
+            </div>
             <div class="bottom">
                 $18
             </div>
         </div>
     </main>
-    <div id="switch">Sushi Lover's Lunch</div>
+    <div id="switch">Switch to Sushi Lover's Lunch!</div>
 
     <script>
         const btn = document.querySelector("#switch");
         btn.addEventListener('click', () => {
             const boxOne = document.querySelector('.one');
             const boxTwo = document.querySelector('.two');
-            boxOne.classList.toggle('front');
-            boxTwo.classList.toggle('back');
 
-            boxOne.classList.toggle('back');
-            boxTwo.classList.toggle('front');
+            if(boxOne.classList.contains('front')) {
+                boxOne.classList.add('back');
+                boxOne.classList.remove('front');
+                boxTwo.classList.add('front');
+                boxTwo.classList.remove('back');
+            } else {
+                boxOne.classList.add('front');
+                boxOne.classList.remove('back');
+                boxTwo.classList.add('back');
+                boxTwo.classList.remove('front');
+            }
 
             if(btn.innerText === "Switch to Sushi Lover's Lunch!") {
                 btn.innerText = "Switch to Happy Sushi Lunch!";
