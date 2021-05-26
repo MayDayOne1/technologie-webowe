@@ -1,0 +1,119 @@
+html, button, input, select, textarea, a {
+    color: #656a6f;
+}
+
+strong, h1, h2, h3, h4, h5, h6, b, .more, ol > li::before, .cta a {
+    font-family: 'robotobold';
+    font-weight: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 66px;
+    line-height: 100%;
+    letter-spacing: -1px;
+    margin: 25px 0 .5em;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    word-wrap: break-word;
+}
+
+h1, h2, h3, h4, .nav a, h1 a, h2 a, h3 a, h4 a, #response, .success, .success::before, #response .failure {
+    color: #2d3438;
+}
+
+h1::after, h2::after, h3::after {
+    content: ".";
+    font-size: 56px;
+    position: relative;
+    padding-left: 3px;
+}
+
+.main ul li::before, h1 span, h2 span, h3 span, h4 span, .highlight, h5, h6, h1::after, h2::after, h3::after, .main-container a:hover, .more::before, ol > li::before, .cta a:hover, .error[generated="true"], .footable.breakpoint > tbody > tr > td.expand::before {
+    color: #ffc000;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: #f3f4f5;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    font: 16px/24px 'robotoregular';
+    margin: 0;
+}
+
+.header-container header {
+    border-bottom: 1px solid #cad2d7;
+}
+
+.logo {
+    display: inline-block;
+    max-width: 131px;
+    text-decoration: none;
+}
+
+nav ul, nav ol {
+    list-style: none;
+    list-style-image: none;
+}
+
+#nav {
+    display: none;
+}
+
+select.tinynav {
+    width: 100%;
+}
+
+.main-content img {
+    max-width: 100%;
+    background: #d7dce3;
+    border: 6px solid #fff;
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+
+.lead {
+    margin-top: 0;
+}
+
+.lead, blockquote {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'aleoitalic';
+}
+
+.clearfix::before, .clearfix::after {
+    content: " ";
+    display: table;
+}
+
+@media screen and (max-width: 600px) {
+    .logo {
+        float: none;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-container header {
+        padding: 30px 0 25px;
+        text-align: center;
+    }
+
+    .third, .half, .fourths, .two-third, .three-fourths {
+        width: 100%;
+        margin-right: 0%;
+        float: none;    
+    }
+
+}
+
+@media screen and (max-width: 1140px) {
+    .wrapper {
+        width: 92%;
+        margin: 0 4%;
+    }
+}
