@@ -9,19 +9,42 @@ header a {
     flex-direction: column;
 }
 
+#headers {
+  margin-bottom: 50px;
+}
+
 header h1, header h6 {
     text-align: center;
 }
 
-.btn-group {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+header h1 {
+  font-size: 40px;
 }
 
-.btn-group a {
-    border-bottom: 1px solid #daa520;
+.menu-items {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100px 100px;
+    text-align: center;
+    display: none;
+    margin-top: -100px;
+}
+
+.displayGrid {
+  display: grid;
+  animation: slide 1s alternate;
+  animation-fill-mode: both;
+}
+
+@keyframes slide {
+  0% {visibility: 0%;}
+  100% {transform: translateY(100px); visibility: 100%;}
+}
+
+.menu-items a {
+    border: 1px solid #daa520;
     padding: 5px;
+    font-size: 30px;
 }
 
 
