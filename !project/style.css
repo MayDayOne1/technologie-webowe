@@ -7,6 +7,8 @@ header a {
     background-color: #eee;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    height: 500px;
 }
 
 #headers {
@@ -27,18 +29,17 @@ header h1 {
     grid-template-rows: 100px 100px;
     text-align: center;
     display: none;
-    margin-top: -100px;
 }
 
-.displayGrid {
-  display: grid;
-  animation: slide 1s alternate;
+.display {
+  animation: slide 1s;
   animation-fill-mode: both;
+  display: grid;
 }
 
 @keyframes slide {
-  0% {visibility: 0%;}
-  100% {transform: translateY(100px); visibility: 100%;}
+  0% {opacity: 0}
+  100% {opacity: 1}
 }
 
 .menu-items a {
