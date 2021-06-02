@@ -1,3 +1,8 @@
+header {
+  height: 100px;
+  background: #eee;
+}
+
 header a {
     text-decoration: none;
     color: #000;
@@ -28,24 +33,39 @@ header h1 {
     grid-template-columns: 50% 50%;
     grid-template-rows: 100px 100px;
     text-align: center;
-    display: none;
-}
-
-.display {
-  animation: slide 1s;
-  animation-fill-mode: both;
-  display: grid;
-}
-
-@keyframes slide {
-  0% {opacity: 0}
-  100% {opacity: 1}
 }
 
 .menu-items a {
     border: 1px solid #daa520;
     padding: 5px;
     font-size: 30px;
+}
+
+main {
+  position: absolute;
+  background: #000;
+  z-index: 1;
+  width: 100%;
+  height: 250px;
+  margin: 100px;
+}
+
+.slide {
+  animation: slide 1s;
+  animation-fill-mode: forwards;
+}
+
+.slide-rev {
+  animation: slideRev 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes slide {
+  100% {transform: translateY(250px);}
+}
+
+@keyframes slideRev {
+  100% {transform: translateY(-250px)}
 }
 
 
