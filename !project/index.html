@@ -29,17 +29,19 @@
                     <a href="#">Cennik</a>
                 </div>
         </header>
-        <main></main>
+        <main>
+        </main>
         <footer>kontakt</footer>
     </div>
     <script type="text/javascript">
         const menu = document.querySelector('.menu');
         menu.addEventListener('click', () => {
-            const main = document.querySelector('main');
-                if(main.classList.contains('slide'))
-                    main.classList.toggle('slide-rev');
-                    
-                
+            const header = document.querySelector('header');
+            header.classList.toggle('slide');
+            if(header.classList.contains('slide'))
+                header.classList.remove('slide-rev');
+            else
+                header.classList.add('slide-rev');   
         })
     </script>
 </body>
