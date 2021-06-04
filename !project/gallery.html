@@ -31,9 +31,25 @@
                 </div>
         </header>
         <div class="gallery">
-            <img src="img/368-1.jpg" alt="photo">
-            <img src="img/368-2.jpg" alt="photo">
+            <img src="img/368-1.jpg" onclick="photoBig('img/368-1.jpg')" alt="photo">
+            <img src="img/368-2.jpg" onclick="photoBig('img/368-2.jpg')" alt="photo">
             <img src="img/368-3.jpg" alt="photo">
+            <img src="img/576-1.jpg" alt="photo">
+            <img src="img/576-2.jpg" alt="photo">
+            <img src="img/576-3.jpg" alt="photo">
+            <img src="img/576-4.jpg" alt="photo">
+            <img src="img/576-5.jpg" alt="photo">
+            <img src="img/576-6.jpg" alt="photo">
+            <img src="img/576-7.jpg" alt="photo">
+            <img src="img/576-8.jpg" alt="photo">
+            <img src="img/576-9.jpg" alt="photo">
+            <img src="img/576-10.jpg" alt="photo">
+            <img src="img/576-11.jpg" alt="photo">
+            <img src="img/576-12.jpg" alt="photo">
+            <img src="img/576-13.jpg" alt="photo">
+            <img src="img/576-14.jpg" alt="photo">
+            <img src="img/576-15.jpg" alt="photo">
+            <div class="photo-big"></div>
         </div>
         <footer>
             <div class="contact">
@@ -47,6 +63,8 @@
         </footer>
     </div>
     <script type="text/javascript">
+
+        // SLIDE NAVBAR
         const menu = document.querySelector('.menu');
         menu.addEventListener('click', () => {
             const header = document.querySelector('header');
@@ -56,6 +74,20 @@
             else
                 header.classList.add('slide-rev');   
         })
+
+        // SHOW PHOTO ON FULLSCREEN
+        function photoBig(photo) {
+            const photoBig = document.querySelector('.photo-big');
+            const container = document.querySelector('.container-fluid');
+            if(photoBig.classList.contains('show-big')) {
+                photoBig.classList.remove('show-big');
+                container.classList.remove('bg-filter');
+            } else {
+                photoBig.style.setProperty('background-image', "url("+photo+")");
+                photoBig.classList.add('show-big');
+                container.classList.add('bg-filter');
+            }
+        }
     </script>
 </body>
 </html>
