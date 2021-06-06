@@ -17,7 +17,7 @@ body {
 /* header */
 
 header {
-  height: 100px;
+  height: 130px;
   overflow: hidden;
   width: 100%;
 }
@@ -27,8 +27,10 @@ header a {
     color: #000;
 }
 
-#headers {
-  margin-bottom: 50px;
+#lesser-headers {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 header h1, header h6 {
@@ -40,6 +42,13 @@ header h1 {
 }
 
 /* slide menu */
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background: #ddd;
+  display: flex;
+}
 
 .menu-items {
     display: grid;
@@ -65,23 +74,23 @@ header h1 {
 }
 
 @keyframes slide {
-  0% {height: 100px;}
   100% {height: 350px;}
 }
 
 @keyframes slide-rev {
   0% {height: 350px;}
-  100% {height: 100px;}
+  100% {height: 130px;}
 }
 
 /* footer */
 footer {
-  background-color: #daa520;
+  background-color: #ddd;
   display: grid;
   grid-template-columns: 50% 50%;
   width: 100%;
   align-self: flex-end;
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .contact-icons {
@@ -103,8 +112,8 @@ footer {
   padding: 0;
 
   transform: scale(50%, 50%);
-  margin-top: -100px;
-  margin-right: 30px;
+  margin-top: -35px;
+  margin-left: 70%;
 }
 
 .line {
@@ -152,6 +161,7 @@ footer {
 
 /* HOMEPAGE */
 main {
+  background-color: #fff;
   background-image: url('img/368-1.jpg');
   background-size: cover;
   height: 500px;
@@ -181,6 +191,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
+  background: #fff;
 }
 
 .gallery img, .photo-big {
