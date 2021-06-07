@@ -13,13 +13,11 @@
     <div class="container-fluid">
         <!-- HEADER -->
         <header>
-            <a href="index.html">
-                <div id="headers">
-                    <h1>Marcin Figura</h1>
-                    <div id="lesser-headers">
-                        <h6>videofilmowanie & fotobudka</h6>
-                    </div>
-            </a>
+            <div id="headers">
+                <h1>Marcin Figura</h1>
+                <div id="lesser-headers">
+                    <h6>videofilmowanie & fotobudka</h6>
+                </div>
                 <div class="navigation">
                     <button class="menu" onclick="this.classList.toggle('opened'); this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
                         <svg width="100" height="100" viewBox="0 0 100 100">
@@ -38,27 +36,13 @@
             </div>
         </header>
         <!-- /HEADER -->
-        <div class="gallery">
-            <img src="img/368-1.jpg" onclick="photoBig('img/368-1.jpg')" alt="photo">
-            <img src="img/368-2.jpg" onclick="photoBig('img/368-2.jpg')" alt="photo">
-            <img src="img/368-3.jpg" onclick="photoBig('img/368-3.jpg')" alt="photo">
-            <img src="img/768-1.jpg" onclick="photoBig('img/768-1.jpg')"alt="photo">
-            <img src="img/768-2.jpg" onclick="photoBig('img/768-2.jpg')" alt="photo">
-            <img src="img/768-3.jpg" onclick="photoBig('img/768-3.jpg')" alt="photo">
-            <img src="img/768-4.jpg" onclick="photoBig('img/768-4.jpg')" alt="photo">
-            <img src="img/768-5.jpg" onclick="photoBig('img/768-5.jpg')" alt="photo">
-            <img src="img/768-6.jpg" onclick="photoBig('img/768-6.jpg')" alt="photo">
-            <img src="img/768-7.jpg" onclick="photoBig('img/768-7.jpg')" alt="photo">
-            <img src="img/768-8.jpg" onclick="photoBig('img/768-8.jpg')" alt="photo">
-            <img src="img/768-9.jpg" onclick="photoBig('img/768-9.jpg')" alt="photo">
-            <img src="img/768-10.jpg" onclick="photoBig('img/768-10.jpg')" alt="photo">
-            <img src="img/768-11.jpg" onclick="photoBig('img/768-11.jpg')" alt="photo">
-            <img src="img/768-12.jpg" onclick="photoBig('img/768-12.jpg')" alt="photo">
-            <img src="img/768-13.jpg" onclick="photoBig('img/768-13.jpg')" alt="photo">
-            <img src="img/768-14.jpg" onclick="photoBig('img/768-14.jpg')" alt="photo">
-            <img src="img/768-15.jpg" onclick="photoBig('img/768-15.jpg')" alt="photo">
-            <div class="photo-big"></div>
+        <div class="about">
+            <h3>Marcin Figura</h3>
+            <p>
+                Fotograf i kamerzysta z 15-letnim doświadczeniem.
+            </p>
         </div>
+        <!-- FOOTER -->
         <footer>
             <div class="contact">
                 <span>Marcin Figura</span>
@@ -69,10 +53,10 @@
                 <a href="mailto:marcinvideo5@onet.pl"><i class="fas fa-envelope-square"></i></a>
             </div>
         </footer>
+        <!-- /FOOTER -->
     </div>
+    <!-- SCRIPT -->
     <script type="text/javascript">
-
-        // SLIDE NAVBAR
         const menu = document.querySelector('.menu');
         menu.addEventListener('click', () => {
             const header = document.querySelector('header');
@@ -82,26 +66,7 @@
             else
                 header.classList.add('slide-rev');   
         })
-
-        // SHOW PHOTO ON FULLSCREEN
-        function photoBig(photo) {
-            const photoBig = document.querySelector('.photo-big');
-            const container = document.querySelector('.container-fluid');
-            if(photoBig.classList.contains('show-big')) {
-                photoBig.classList.remove('show-big');
-                container.classList.remove('bg-filter');
-            } else {
-                photoBig.style.setProperty('background-image', "url("+photo+")");
-                photoBig.classList.add('show-big');
-                container.classList.add('bg-filter');
-            }
-
-            // hide big photo on click
-            photoBig.addEventListener('click', () => {
-                photoBig.classList.remove('show-big');
-                container.classList.remove('bg-filter');
-            })
-        }
     </script>
+    <!-- /SCRIPT -->
 </body>
 </html>
