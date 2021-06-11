@@ -226,10 +226,26 @@ main {
   box-shadow: 1px 1px 1px #000;
   margin-bottom: 10px;
 }
+
+article h2 {
+  margin-bottom: 30px;
+}
+
+article h2, .event h3 {
+  text-align: center;
+}
+
+.event {
+  height: 50px;
+}
+
+.event h3 {
+  border-bottom: 1px solid #ccc;
+}
   
 /* //////////////////////////////////////////////////////////////////////////// */
 
-/* GALLERY */
+/* GALLERY & ABOUT */
 
 .gallery {
   width: 100%;
@@ -238,14 +254,14 @@ main {
   background: #fff;
 }
 
-.gallery img, .photo-big {
+.gallery img, .photo-big, .about img {
   border: 5px solid #fff;
   border-radius: 10px;
   box-shadow: 1px 1px 1px #000;
   cursor: pointer;
 }
 
-.gallery img {
+.gallery img, .about img {
   width: 100%;
   margin: 5px auto;
   object-fit: cover;
@@ -279,7 +295,13 @@ main {
   100% {visibility: visible}
 }
 
-/* ABOUT */
+.about {
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ///////////////////////////////////////////// */
 
 /* PRICE LIST */
 
