@@ -359,6 +359,21 @@ article h2, .event h3 {
     height: 1000px;
   }
 
+  article {
+    display: flex;
+    padding: 10px;
+  }
+
+  article h2 {
+    width: 50%;
+    align-self: center;
+    margin: 10px;
+  }
+
+  article .events {
+   width: 50%;
+  }
+
   /* GALLERY */
   .gallery {
     display: grid;
@@ -377,6 +392,9 @@ article h2, .event h3 {
 /* ////////////////////////////////////////////////////// */
 
 @media screen and (min-width: 992px) {
+
+  /* TEMPLATE */
+
   header {
     grid-template-columns: 10% 40% 0% 50%;
     height: 100px;
@@ -389,6 +407,22 @@ article h2, .event h3 {
   .menu-items {
     grid-column: 3 / 5;
     height: 80px;
+  }
+
+  /* HOMEPAGE */
+
+  .homepage {
+    display: flex;
+  }
+
+  main {
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 650px;
+  }
+
+  article {
+    flex-direction: column;
   }
 
   .gallery {
