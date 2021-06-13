@@ -41,20 +41,28 @@
     </header>
     <!-- /HEADER -->
         <div class="pricelist">
-            <div class="list">
+            <div class="list active">
                 <h2>videofilmowanie</h2>
-                <ul>
-                    <li>Ponad 300 zdjęć</li>
-                    <li>Minimum półtoragodzinny film</li>
-                </ul>
+                <div class="properties">
+                    <ul>
+                        <li>Profesjonalny fotoreportaż</li>
+                        <li>Ponad 300 zdjęć</li>
+                        <li>Film pełnometrażowy</li>
+                    </ul>
+                </div>
+                <span class="price">1000 zł</span>
             </div>
-            <div class="list">
+            <div class="list active-rev">
                 <h2>videofilmowanie + fotobudka</h2>
-                <ul>
-                    <li>Ponad 300 zdjęć</li>
-                    <li>Minimum półtoragodzinny film</li>
-                    <li>Fotobudka z przebraniami</li>
-                </ul>
+                <div class="properties">
+                    <ul>
+                        <li>Profesjonalny fotoreportaż</li>
+                        <li>Ponad 300 zdjęć</li>
+                        <li>Film pełnometrażowy</li>
+                        <li>Fotobudka z przebraniami</li>
+                    </ul>
+                </div>
+                <span class="price">1500 zł</span>
             </div>
         </div>
         <!-- FOOTER -->
@@ -80,6 +88,21 @@
                 header.classList.remove('slide-rev');
             else
                 header.classList.add('slide-rev');   
+        })
+
+        const pricelist = document.querySelector('.pricelist');
+        pricelist.addEventListener('click', () => {
+            const lists = document.querySelectorAll('.list');
+            lists[0].classList.toggle('active');
+            lists[1].classList.toggle('active');
+
+            if(lists[0].classList.contains('active')) {
+                lists[0].classList.remove('active-rev');
+                lists[1].classList.add('active-rev');
+            } else {
+                lists[0].classList.add('active-rev');
+                lists[1].classList.remove('active-rev');
+            }
         })
     </script>
     <!-- /SCRIPT -->

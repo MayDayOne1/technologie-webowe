@@ -33,6 +33,7 @@ header {
   display: grid;
   grid-template-columns: 15% 70% 15%;
   grid-template-rows: 150px 200px;
+  border-bottom: 1px solid #ccc;
 }
 
 header a {
@@ -301,22 +302,52 @@ article h2, .event h3 {
   flex-direction: column;
 }
 
+.about-contact li {
+  font-weight: 600;
+  list-style-type: square;
+}
+
+.about-contact a {
+  text-decoration: none;
+  color: #daa520;
+}
+
 /* ///////////////////////////////////////////// */
 
 /* PRICE LIST */
 
 .list {
-  height: 200px;
+  height: 300px;
   border: 1px solid #daa520;
   margin: 5px auto;
-  padding: 10px;
+  /* padding: 10px; */
   box-shadow: 1px 1px 1px #000;
   background-color: #efefef;
+  display: flex;
+  flex-direction: column;
+}
+
+.list li {
+  list-style-type: square;
 }
 
 .list h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin: 10px 0 30px 0;
+}
+
+.properties {
+  height: 100px;
+}
+
+.price {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  bottom: 0px;
+  padding: 15px 0;
+  border-top: 2px dashed #daa520;
 }
 
 /* ////////////////////////////////////////////////// */
@@ -328,6 +359,35 @@ article h2, .event h3 {
 
   .photo-big {
     height: 700px;
+  }
+
+  /* ABOUT */
+
+  .pricelist {
+    padding-top: 100px;
+    height: 500px;
+  }
+  
+  .active {
+    animation: active .5s both;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .active-rev {
+    animation: active-rev .5s both;
+    cursor: pointer;
+    z-index: 0;
+  }
+
+  @keyframes active {
+    0% {transform: scale(100%, 100%);}
+    100% {transform: scale(125%, 125%);}
+  }
+
+  @keyframes active-rev {
+    0% {transform: scale(125%, 125%);}
+    100% {transform: scale(100%, 100%);}
   }
 }
 
@@ -463,9 +523,14 @@ article h2, .event h3 {
     margin-bottom: 80px;
   }
 
-  .about p {
+  .about-contact {
     grid-row: 1 / 3;
     padding: 10px;
+  }
+
+  .about img {
+    width: 100%;
+    height: 280px;
   }
 
 }
