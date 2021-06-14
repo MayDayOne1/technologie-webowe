@@ -59,8 +59,8 @@
             <img src="img/768-13.jpg" onclick="photoBig('img/768-13.jpg')" alt="photo">
             <img src="img/768-14.jpg" onclick="photoBig('img/768-14.jpg')" alt="photo">
             <img src="img/768-15.jpg" onclick="photoBig('img/768-15.jpg')" alt="photo">
-            <div class="photo-big"></div>
         </div>
+        <div class="photo-big"></div>
         <footer>
             <div class="contact">
                 <span>Marcin Figura</span>
@@ -88,20 +88,16 @@
         // SHOW PHOTO ON FULLSCREEN
         function photoBig(photo) {
             const photoBig = document.querySelector('.photo-big');
-            const container = document.querySelector('.container-fluid');
             if(photoBig.classList.contains('show-big')) {
                 photoBig.classList.remove('show-big');
-                container.classList.remove('bg-filter');
             } else {
                 photoBig.style.setProperty('background-image', "url("+photo+")");
                 photoBig.classList.add('show-big');
-                container.classList.add('bg-filter');
             }
 
             // hide big photo on click
             photoBig.addEventListener('click', () => {
                 photoBig.classList.remove('show-big');
-                container.classList.remove('bg-filter');
             })
         }
     </script>
