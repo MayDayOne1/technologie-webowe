@@ -90,6 +90,40 @@ select.tinynav {
     display: table;
 }
 
+footer .wrapper {
+    font-size: 14px;
+    color: #9fa6aa;
+    border-top: 1px solid #cad2d7;
+    padding: 50px 0 50px;
+    margin-top: 20px;
+}
+
+.social-link {
+    width: 31px;
+    opacity: .4;
+    display: inline-block;
+    transition: all 250ms ease-in-out;
+}
+
+.social-link img {
+    width: 100%;
+}
+
+a img {
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+    position: relative;
+}
+
+.social-link:hover {
+    opacity: .7;
+}
+
+img {
+    vertical-align: middle;
+    border: none;
+}
+
 @media screen and (max-width: 600px) {
     .logo {
         float: none;
@@ -107,6 +141,10 @@ select.tinynav {
         width: 100%;
         margin-right: 0%;
         float: none;    
+    }
+
+    .foot.right {
+        text-align: center;
     }
 
 }
